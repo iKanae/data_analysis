@@ -4,7 +4,7 @@ import operator
 
 def loadDataset():
     dataMat=[];lableMat=[]
-    fr=open(".txt")
+    fr=open("/home/kanae/iris_1.txt")
     for line in fr:
         lineArr=line.strip('\n').split(',')
         dataMat.append([float(lineArr[0]),float(lineArr[3])])
@@ -14,14 +14,15 @@ def loadDataset():
 def preceptron_test(data,labels):
     w=[1]*len(data[0])
     a=0.00001
-    n=20000
+    n=200000
+    b=1
     for i in range(n):
         for sample in data:
             label=labels[data.index(sample)]
             #print sample,w,label,data.index(sample)
-            dis=label*int((np.mat(sample)*np.mat(w).T+b))
+            dis=label*int((np.dot(np.array(sample),np.array(w).T)+b))
             if dis<=0:
-                w=w+a*label*np.mat(sample)
+                w=w+a*label*np.array(sample)
                 b=b+a*label
     return w,b
 
@@ -47,7 +48,7 @@ def plotBestFit(w,b):
     ax.scatter(xcord1,ycord1,s=30,c='red',marker='s')
     ax.scatter(xcord2,ycord2,s=30,c='green')
     x=np.arange(0.0,15.0,0.1)
-    y=(-b-weights[0][0]*x)/weights[0][1]
+    y=(-b-weights[0]*x)/weights[1]
     ax.plot(x,y)
     plt.xlabel('X1')
     plt.ylabel('X2')
@@ -56,4 +57,7 @@ def plotBestFit(w,b):
 def main():
     data,label=loadDataset()
     w,b=preceptron_test(data,label)
-    print plotBestFit(w,b)
+    plotBestFit(w,b)
+
+main()
+
