@@ -59,5 +59,3 @@ def main():
     w,b=preceptron_test(data,label)
     plotBestFit(w,b)
 
-main()
-
