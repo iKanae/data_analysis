@@ -13,7 +13,6 @@ def loadDataset():
 
 def preceptron_test(data,labels):
     w=[1]*len(data[0])
-    b=1
     a=0.00001
     n=20000
     for i in range(n):
