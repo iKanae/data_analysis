@@ -46,8 +46,6 @@ def findKnn(goal,tree):
     return dis
 
 
-data=[[2,3],[5,4],[9,6],[4,7],[8,1],[7,2]]
-data_tree=createKdtree(data)
+#data=[[2,3],[5,4],[9,6],[4,7],[8,1],[7,2]]
+#data_tree=createKdtree(data)
 #data2=[[2,3]]
-
-print findKnn([2,3],data_tree)
