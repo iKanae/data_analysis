@@ -14,7 +14,7 @@ def loadDataset():
 def preceptron_test(data,labels):
     w=[1]*len(data[0])
     a=0.00001
-    n=5000000
+    n=200000
     b=1
     for i in range(n):
         for sample in data:
@@ -58,5 +58,3 @@ def main():
     data,label=loadDataset()
     w,b=preceptron_test(data,label)
     plotBestFit(w,b)
-    return 0
-
