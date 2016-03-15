@@ -58,3 +58,4 @@ def main():
     data,label=loadDataset()
     w,b=preceptron_test(data,label)
     plotBestFit(w,b)
+    return 0
