@@ -53,6 +53,7 @@ def findKnn(goal,tree):
             temp_tree=temp_tree.left
         else:
             temp_tree=temp_tree.right
+
     while list:
         back_tree=list.pop()
         temp_di=back_tree.di
@@ -70,7 +71,8 @@ def findKnn(goal,tree):
                     root = temp_tree.root
     return root, min_dist
 
-
+'''
 data=[[2,3],[5,4],[9,6],[4,7],[8,1],[7,2]]
 data_tree=createKdtree(data)
 print findKnn([1,2],data_tree)
+'''
