@@ -155,33 +155,5 @@ def main():
     return 0
 
 
-def Knn_test(inX,dataset,labels,k):
-    pointlist=[]
-    labellist=list(set(labels))
-    resultlist={}
-    #count every point
-    '''
-    for i in range(len(dataset)):
-        dis=dist(inX,dataset[i])
-        if dis<=k:
-            pointlist.append([dataset[i],labels[i],dis])
-    '''
-    #using kd-tree
-    KDtree=createKdtree(dataset)
-
-    for i in range
-
-    for j in labellist:
-        resultlist[j]=0
-        for vector in pointlist:
-            if vector[1]==j:
-                resultlist[j]+=1
-    resultsort=sorted(resultlist.items(),key=lambda x:-x[1])
-    return resultsort[0][0]
-
-data=[[11,11],[20,1],[1,10],[-11,-12],[33,1],[21,2],[32,2]]
-labels=["a","a","b","b","a","b"]
-print Knn_test([1,2],data,labels,10)
-
 
 
