@@ -90,12 +90,11 @@ def findKnn(goal,tree,k):
         klist.pop()
         klist.append(temp_point)
 
-    return root, min_dist,label,klist.sort(key=lambda x:x[1])
+    return root, min_dist,label,klist
 
-'''
+
 #test code
 data=[[2,3],[5,4],[9,6],[4,7],[8,1],[7,2],[1,1],[9,10],[20,1],[3,6],[9,9],[11,2],[11,1]]
 labels=["a","a","b","b","a","b","a","a","a","a","b","b","a"]
 data_tree=createKdtree(data,labels)
 list=findKnn([1,2],data_tree,3)[3]
-'''
