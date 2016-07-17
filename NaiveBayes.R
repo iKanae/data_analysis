@@ -3,11 +3,11 @@ library(ggplot2)
 
 
 
-spam.path<-'/home/ikanae/Rscripts/data/spam/'
+spam.path<-'data/spam/'
 #spam2.path<-'/home/data/spam_2/'
-easyham.path<-'/home/ikanae/Rscripts/data/easy_ham/'
+easyham.path<-'data/easy_ham/'
 #easyham2.path<-'data/easy_ham_2'
-hardham.path<-'/home/ikanae/Rscripts/data/hard_ham/'
+hardham.path<-'data/hard_ham/'
 #hardham2.path<-'data/hard_ham_2/'
 
 get.msg<-function(path){
